@@ -23,5 +23,12 @@
       expect(thermostat.getTemperature()).toBe(19);
     });
 
+    it('has a minimum temperature of 10', function() {
+      for (var t = 20; t > 9; t--) {
+        thermostat.down();
+      }
+      expect(thermostat.getTemperature()).toBe(10);
+    });
+
   });
 }());
