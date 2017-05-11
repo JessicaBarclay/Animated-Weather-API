@@ -51,7 +51,7 @@
       expect(thermostat.energyUsage()).toBe('low-usage');
     });
 
-    it('can rreport when energy usage is high', function() {
+    it('can report when energy usage is high', function() {
       for (var t = 20; t < 26; t++) {
         thermostat.up();
       }
