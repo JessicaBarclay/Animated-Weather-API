@@ -18,5 +18,10 @@
       expect(thermostat.getTemperature()).toBe(21);
     });
 
+    it('can decrease the temperature with a down function', function() {
+      thermostat.down();
+      expect(thermostat.getTemperature()).toBe(19);
+    });
+
   });
 }());
