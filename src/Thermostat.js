@@ -9,6 +9,8 @@ var Thermostat = function() {
 };
 Thermostat.prototype.getTemperature = function() { return this.temperature; };
 
+Thermostat.prototype.reset = function() { this.temperature = 20; };
+
 Thermostat.prototype.isInPowerSaving = function() {
   return this.powerSaving;
 };
