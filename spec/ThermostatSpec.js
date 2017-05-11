@@ -40,6 +40,10 @@
       expect(thermostat.getTemperature()).toBe(20);
     });
 
+    it('can return the current energy usage', function() {
+      expect(thermostat.energyUsage()).toBe('medium-usage');
+    });
+
     describe('Context: power saving mode is on', function() {
       it('has a maximum temperature of 25 degrees', function() {
       	for (var t = 20; t < 26; t++) {

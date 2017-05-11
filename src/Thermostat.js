@@ -27,6 +27,8 @@ Thermostat.prototype.isMaximumTemperature = function() {
   }
 };
 
+Thermostat.prototype.energyUsage = function() { return 'medium-usage'; };
+
 Thermostat.prototype.togglePowerSaving = function() {
   if (this.isInPowerSaving() === true) {
     this.powerSaving = false;
