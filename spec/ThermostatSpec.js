@@ -9,7 +9,7 @@
       thermostat= new Thermostat();
     });
 
-    it('has a default starting temp of 20', function() {
+    it('has a default starting temp of 20 degrees', function() {
       expect(thermostat.getTemperature()).toBe(20);
     });
 
@@ -23,7 +23,7 @@
       expect(thermostat.getTemperature()).toBe(19);
     });
 
-    it('has a minimum temperature of 10', function() {
+    it('has a minimum temperature of 10 degrees', function() {
       for (var t = 20; t > 9; t--) {
         thermostat.down();
       }
@@ -32,11 +32,22 @@
 
     it('has a maximum temperature of 25 degrees', function() {
       for (var t = 20; t < 26; t++) {
-	thermostat.up();
+	      thermostat.up();
       }
       expect(thermostat.getTemperature()).toBe(25);
     });
-	
+
+    describe('Context: power saving mode off', function() {
+      beforeEach(function() {
+        thermostat.togglePowerSaving();
+      });
+      it('has a maximum temperature of 32 degrees', function() {
+        for (var t = 20; t < 33; t++) {
+          thermostat.up();
+        }
+        expect(thermostat.getTemperature()).toBe(32);
+      });
+    });
 
   });
 }());
