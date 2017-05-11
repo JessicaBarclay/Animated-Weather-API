@@ -1,7 +1,8 @@
 'use strict';
 
 var Thermostat = function() {
-  this.temperature = 20;
+  this.DEFAULT_TEMPERATURE = 20;
+  this.temperature = this.DEFAULT_TEMPERATURE;
   this.MIN_TEMPERATURE_LIMIT = 10;
   this.MAX_TEMP_POWER_SAVING_ON = 25;
   this.MAX_TEMP_POWER_SAVING_OFF = 32;
@@ -9,7 +10,7 @@ var Thermostat = function() {
 };
 Thermostat.prototype.getTemperature = function() { return this.temperature; };
 
-Thermostat.prototype.reset = function() { this.temperature = 20; };
+Thermostat.prototype.reset = function() { this.temperature = this.DEFAULT_TEMPERATURE; };
 
 Thermostat.prototype.isInPowerSaving = function() {
   return this.powerSaving;
