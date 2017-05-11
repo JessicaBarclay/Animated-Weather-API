@@ -45,6 +45,9 @@ Thermostat.prototype.togglePowerSaving = function() {
     this.powerSaving = false;
   } else {
     this.powerSaving = true;
+    if (this.getTemperature() > this.MAX_TEMP_POWER_SAVING_ON) {
+      this.temperature = this.MAX_TEMP_POWER_SAVING_ON;
+    }
   }
 };
 

@@ -6,16 +6,21 @@
     <script src="src/Thermostat.js"></script>
     <script src="src/Interactivity.js"></script>
     <style>
-      a.boldify {
-      font-weight: bold;
-      border: red dotted 2px;
+      .low-usage {
+      color: blue;
+      }
+      .medium-usage {
+      color: black;
+      }
+      .high-usage {
+      color: red;
       }
     </style>
   </head>
 
   <body>
     <section>
-      <h1> Temperature: <span id="temperature_display">20</span> </h1>
+      <h1> Temperature: <span id="temperature_display"></span> </h1>
       <p>
         <a class="control" id="up" href="#" >Up</a>
         <a class="control" id="down" href="#" >Down</a>

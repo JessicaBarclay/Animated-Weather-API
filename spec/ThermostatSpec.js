@@ -40,6 +40,20 @@
       expect(thermostat.getTemperature()).toBe(20);
     });
 
+    describe('power saving mode is switched off and then back on', function() {
+      describe('temp is above power-saving temperature limit', function() {
+	it('reduces temperature to power-saving limit', function() {
+	  thermostat.togglePowerSaving();
+          for (var t = 20; t < 30; t++) {
+            thermostat.up();
+          }
+	  thermostat.togglePowerSaving();
+	  expect(thermostat.getTemperature()).toBe(25);
+	});
+      });
+    });
+	  
+
     describe('Energy usage levels', function() {
       describe('when temperature is below 18 degrees', function() {
         it('reports energy usage is low', function() {
