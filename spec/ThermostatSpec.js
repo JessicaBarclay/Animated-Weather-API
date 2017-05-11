@@ -30,5 +30,13 @@
       expect(thermostat.getTemperature()).toBe(10);
     });
 
+    it('has a maximum temperature of 25 degrees', function() {
+      for (var t = 20; t < 26; t++) {
+	thermostat.up();
+      }
+      expect(thermostat.getTemperature()).toBe(25);
+    });
+	
+
   });
 }());
