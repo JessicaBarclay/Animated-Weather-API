@@ -40,22 +40,30 @@
       expect(thermostat.getTemperature()).toBe(20);
     });
 
-    it('can report when energy usage is medium', function() {
-      expect(thermostat.energyUsage()).toBe('medium-usage');
-    });
+    describe('Energy usage levels', function() {
+      describe('when temperature is below 18 degrees', function() {
+        it('reports energy usage is low', function() {
+          for (var t = 20; t > 17; t--) {
+            thermostat.down();
+          }
+          expect(thermostat.energyUsage()).toBe('low-usage');
+        });
+      });
 
-    it('can report when energy usage is low', function() {
-      for (var t = 20; t > 17; t--) {
-        thermostat.down();
-      }
-      expect(thermostat.energyUsage()).toBe('low-usage');
-    });
+      describe('when temperature is below 25 degrees', function() {
+        it('reports energy usage is medium', function() {
+          expect(thermostat.energyUsage()).toBe('medium-usage');
+        });
+      });
 
-    it('can report when energy usage is high', function() {
-      for (var t = 20; t < 26; t++) {
-        thermostat.up();
-      }
-      expect(thermostat.energyUsage()).toBe('high-usage');
+      describe('when temperature is anything else', function() {
+        it('reports energy usage is high', function() {
+          for (var t = 20; t < 25; t++) {
+            thermostat.up();
+          }
+          expect(thermostat.energyUsage()).toBe('high-usage');
+        });
+      });
     });
 
     describe('Context: power saving mode is on', function() {
