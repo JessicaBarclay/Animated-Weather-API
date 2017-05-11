@@ -40,8 +40,22 @@
       expect(thermostat.getTemperature()).toBe(20);
     });
 
-    it('can return the current energy usage', function() {
+    it('can report when energy usage is medium', function() {
       expect(thermostat.energyUsage()).toBe('medium-usage');
+    });
+
+    it('can report when energy usage is low', function() {
+      for (var t = 20; t > 17; t--) {
+        thermostat.down();
+      }
+      expect(thermostat.energyUsage()).toBe('low-usage');
+    });
+
+    it('can rreport when energy usage is high', function() {
+      for (var t = 20; t < 26; t++) {
+        thermostat.up();
+      }
+      expect(thermostat.energyUsage()).toBe('high-usage');
     });
 
     describe('Context: power saving mode is on', function() {
