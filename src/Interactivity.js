@@ -1,6 +1,7 @@
 (function() {
   'use strict';
   $(document).ready(function() {
+    var location = 'Henry';
     var thermostat = new Thermostat();
     updateThermostatDisplay();
     getWeatherData();
@@ -30,14 +31,22 @@
 
     });
 
+    $('#select_location').submit(function(event) {
+      location = $('#user_location').val();
+      getWeatherData();
+    });
+
     function updateThermostatDisplay() {
       $("#temperature_display").text(thermostat.getTemperature());
       $("#power_usage").text(thermostat.energyUsage());
       $('#temperature_display').attr('class', thermostat.energyUsage());
     }
-      
+
     function getWeatherData() {
-      $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&appid=ca6621a185dacb0bdc5c58b83638da59', function(data){
+      var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location;
+      var units = '&units=metric';
+      var token = '&appid=ca6621a185dacb0bdc5c58b83638da59';
+      $.get(url + units + token, function(data){
 	$('#weather_data').text((data.name).concat(": ").concat(Math.round(data.main.temp)));
       });
     }
