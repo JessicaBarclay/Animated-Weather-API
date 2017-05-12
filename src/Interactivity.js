@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   $(document).ready(function() {
-    var location = 'Henry';
+    var location = 'London,uk';
     var thermostat = new Thermostat();
     updateThermostatDisplay();
     getWeatherData();
@@ -24,7 +24,7 @@
 
       if (thermostat.isInPowerSaving()) {
         $("#status").text("On");
-	updateThermostatDisplay();
+	      updateThermostatDisplay();
       } else {
         $("#status").text("Off");
       }
@@ -47,7 +47,7 @@
       var units = '&units=metric';
       var token = '&appid=ca6621a185dacb0bdc5c58b83638da59';
       $.get(url + units + token, function(data){
-	$('#weather_data').text((data.name).concat(": ").concat(Math.round(data.main.temp)));
+	      $('#weather_data').text((data.name).concat(": ").concat(Math.round(data.main.temp)));
       });
     }
   });

@@ -7,25 +7,39 @@
     <script src="src/Interactivity.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-
-  <body>
+  <body class="sansserif">
+  <div id="fabrizio"></div>
+  <a href="http://fabrizio.co"></a>
+    <div class="container">
+  	<div class="sunny"></div>
+  	<div class="cloudy"></div>
+  	<div class="rainy"></div>
+  	<div class="snowy"></div>
+  	<div class="rainbow"></div>
+  	<div class="starry"></div>
+  	<div class="stormy"></div>
+  </div>
     <section>
-      <h1> Temperature: <span id="temperature_display"></span> </h1>
-      <h2> Weather in <span id="weather_data"></span></h2>
-      <form id="select_location">
-        <input type="text" id="user_location">
-        <input type="submit">
-      </form>
+      <div class="weather-style">
+        <h3> Weather in <span id="weather_data"></span>&deg;C</h3>
+        <form id="select_location">
+          <input type="text" id="user_location">
+          <input type="submit">
+        </form>
+      </div>
       <p>
-      	<div id="up-down">
-      	  <a class="control" id="up" href="#" >Up</a><br>
-      	  <a class="control" id="down" href="#" >Down</a>
-      	</div>
-      	<div id="other-settings">
-      	  <a class="control" id="reset" href="#" >Reset</a><br>
-      	  <a class="control" id="power_saving_toggle" href="#">Power Saving:<span id="status">On</span></a><br>
-      	  Power Usage: <span id="power_usage" >medium-usage</span>
-      	</div>
+        <div class="thermostat-style">
+            <h3> Temperature: <span id="temperature_display"></span>&deg;C</h3>
+        	<div id="up-down">
+        	  <a class="control" id="up" href="#" >Up</a><br>
+        	  <a class="control" id="down" href="#" >Down</a>
+        	</div>
+        	<div id="other-settings">
+        	  <a class="control" id="reset" href="#" >Reset</a><br>
+        	  <a class="control" id="power_saving_toggle" href="#">Power Saving is <span id="status">On</span></a><br>
+        	  Power Usage: <span id="power_usage" >medium-usage</span>
+        	</div>
+        </div>
       </p>
     </section>
   </body>
