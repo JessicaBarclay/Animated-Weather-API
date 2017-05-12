@@ -3,6 +3,7 @@
   $(document).ready(function() {
     var thermostat = new Thermostat();
     updateThermostatDisplay();
+    getWeatherData();
 
     $("a#up").click(function(event) {
       thermostat.up();
@@ -35,6 +36,10 @@
       $('#temperature_display').attr('class', thermostat.energyUsage());
     }
       
-      
+    function getWeatherData() {
+      $.get('http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&appid=ca6621a185dacb0bdc5c58b83638da59', function(data){
+	$('#weather_data').text((data.name).concat(": ").concat(Math.round(data.main.temp)));
+      });
+    }
   });
 }());
