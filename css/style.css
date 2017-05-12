@@ -20,19 +20,16 @@ section {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-p {
-}
 #up-down {
+  display: inline-block;
   position: relative;
-  left: 0px;
+  top: -19px;
 }
 #other-settings {
+  display: inline-block;
   position: relative;
-  right: 0px;
 }
-a #up, a #down {
-  border: 5px;
-}
+
 a.control {
   overflow: auto;
   background-color: #d64078;
@@ -56,7 +53,7 @@ a.control:hover {
   background-color: #c63b6f;
 }
 a.control:active {
-  border-bottom: solid #b03060 1px;
+  border-bottom: solid #b03060 4px;
   top: 4px;
   -webkit-transition: all 0 ease-out;  /* Safari 3.2+, Chrome */
      -moz-transition: all 0 ease-out;  /* Firefox 4-15 */

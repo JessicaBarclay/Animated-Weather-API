@@ -23,10 +23,10 @@
       thermostat.togglePowerSaving();
 
       if (thermostat.isInPowerSaving()) {
-        $("#power_saving_toggle").text("On");
+        $("#status").text("On");
 	updateThermostatDisplay();
       } else {
-        $("#power_saving_toggle").text("Off");
+        $("#status").text("Off");
       }
 
     });
