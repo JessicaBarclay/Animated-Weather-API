@@ -1,47 +1,40 @@
 .low-usage {
-    color: blue;
+  color: blue;
 }
 .medium-usage {
-    color: black;
+  color: black;
 }
 .high-usage {
-    color: red;
+  color: red;
 }
-
 section {
-    position: relative;
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 15px;
-    border: 20px solid green;
-    border-radius: 20px;
+  position: relative;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 20px solid green;
+  border-radius: 20px;
 }
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 p {
 }
-
 #up-down {
-    position: absolute:
-    max-width: 300px;
-    left: 5%;
+  position: relative;
+  left: 0px;
 }
-
 #other-settings {
-    position: absolute:
-    max-width: 300px;
-    right: 5%;
+  position: relative;
+  right: 0px;
 }
-
 a #up, a #down {
-    border: 5px;
+  border: 5px;
 }
-
 a.control {
+  overflow: auto;
   background-color: #d64078;
   color: white;
   border-radius: .3em;
@@ -59,11 +52,9 @@ a.control {
        -o-transition: all 0.1s ease-out;  /* Opera 10.5–12.00 */
           transition: all 0.1s ease-out;  /* Firefox 16+, Opera 12.50+ */
 }
-
 a.control:hover {
   background-color: #c63b6f;
 }
-
 a.control:active {
   border-bottom: solid #b03060 1px;
   top: 4px;
