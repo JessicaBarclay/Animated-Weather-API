@@ -9,6 +9,7 @@
 }
 
 section {
+    position: relative;
     max-width: 600px;
     margin: 20px auto;
     padding: 15px;
@@ -22,6 +23,7 @@ section {
 }
 
 a.control {
+  position: absolute;
   background-color: #d64078;
   color: white;
   border-radius: .3em;
@@ -38,6 +40,10 @@ a.control {
      -moz-transition: all 0.1s ease-out;  /* Firefox 4-15 */
        -o-transition: all 0.1s ease-out;  /* Opera 10.5–12.00 */
           transition: all 0.1s ease-out;  /* Firefox 16+, Opera 12.50+ */
+}
+
+#up {
+
 }
 
 a.control.prev {
