@@ -10,7 +10,7 @@
 
 section {
     position: relative;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 15px;
     border: 20px solid green;
@@ -22,8 +22,26 @@ section {
     box-sizing: border-box;
 }
 
+p {
+}
+
+#up-down {
+    position: absolute:
+    max-width: 300px;
+    left: 5%;
+}
+
+#other-settings {
+    position: absolute:
+    max-width: 300px;
+    right: 5%;
+}
+
+a #up, a #down {
+    border: 5px;
+}
+
 a.control {
-  position: absolute;
   background-color: #d64078;
   color: white;
   border-radius: .3em;
@@ -40,18 +58,6 @@ a.control {
      -moz-transition: all 0.1s ease-out;  /* Firefox 4-15 */
        -o-transition: all 0.1s ease-out;  /* Opera 10.5–12.00 */
           transition: all 0.1s ease-out;  /* Firefox 16+, Opera 12.50+ */
-}
-
-#up {
-
-}
-
-a.control.prev {
-    margin-left: 0;
-}
-
-a.control.next {
-    margin-right: 0;
 }
 
 a.control:hover {
