@@ -20,3 +20,43 @@ section {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+a.control {
+  background-color: #d64078;
+  color: white;
+  border-radius: .3em;
+  padding: .2em 0;
+  position: relative;
+  margin: 0 1.5em;
+  width: 10em;
+  display: inline-block;
+  text-decoration: none;
+  border: solid #b03060 1px;
+  border-bottom: solid #b03060 4px;
+  text-shadow: 0px 2px 0 #b03060;
+  -webkit-transition: all 0.1s ease-out;  /* Safari 3.2+, Chrome */
+     -moz-transition: all 0.1s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.1s ease-out;  /* Opera 10.5–12.00 */
+          transition: all 0.1s ease-out;  /* Firefox 16+, Opera 12.50+ */
+}
+
+a.control.prev {
+    margin-left: 0;
+}
+
+a.control.next {
+    margin-right: 0;
+}
+
+a.control:hover {
+  background-color: #c63b6f;
+}
+
+a.control:active {
+  border-bottom: solid #b03060 1px;
+  top: 4px;
+  -webkit-transition: all 0 ease-out;  /* Safari 3.2+, Chrome */
+     -moz-transition: all 0 ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0 ease-out;  /* Opera 10.5–12.00 */
+          transition: all 0 ease-out;  /* Firefox 16+, Opera 12.50+ */
+}
