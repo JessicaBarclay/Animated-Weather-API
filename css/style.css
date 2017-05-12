@@ -29,7 +29,6 @@ section {
   display: inline-block;
   position: relative;
 }
-
 a.control {
   overflow: auto;
   background-color: #d64078;
