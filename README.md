@@ -4,7 +4,7 @@
 
 #### Utilizes OpenWeatherMap API
 
-![Alt text](https://github.com/JessicaBarclay/Animated-Weather_API/blob/master/links/weather.png "weather")
+![Alt text](https://github.com/JessicaBarclay/Animated-Weather-API/blob/master/links/weather.png "weather")
 
 #### Javascript interactive thermostat
-![Alt text](https://github.com/JessicaBarclay/Animated-Weather_API/blob/master/links/thermostat.png "thermostat")
+![Alt text](https://github.com/JessicaBarclay/Animated-Weather-API/blob/master/links/thermostat.png "thermostat")
